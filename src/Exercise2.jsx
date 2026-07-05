@@ -26,7 +26,9 @@ const Post = ()=>{
 const Footer = ()=>{
 
     return(
-        <p>@copyright Market. All right reserved</p>
+        <>
+        <p>@copyright Market. All right reserved</p>  <br/> <br/> <br/>
+        </>
     )
 }
 
