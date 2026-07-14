@@ -3,8 +3,8 @@ import Blog  from './Exercise2'
 import  DynamicCard from './Exercise3'
 import ListProduct from './Exercise5'
 
-// Exercise 4
-import { useState } from 'react'
+
+import { useEffect , useState } from 'react'
 
 
 function App(){
@@ -20,6 +20,26 @@ function App(){
 
     // only Exercise 4 up teo const
 
+
+
+    
+
+    // Exercise 6
+
+    const [name , setName] = useState();
+
+    const [great , setGreat] = useState("Hello");
+
+    useEffect(()=>{
+        if(!name){
+            document.title = "Welcome"
+        }else{
+                document.title = `${great} , ${name}`
+        }
+
+    },[name , great ])
+
+    // exerise 6 end
 
     return(
         <>
@@ -49,6 +69,23 @@ function App(){
 
         <ListProduct/>
 
+
+
+        {/* Exercise 6 */}
+         <h1>Exercise 6</h1> <br/>
+         <h2>Enter your Name</h2>
+         <input 
+                type="text"
+                value={name}
+                onChange={(e)=> setName(e.target.value)}
+          /> <br/> <br/>
+
+            <h2>Choose a Greating</h2>
+            <input 
+                type="text"
+                value={great}
+                onChange={(e)=> setGreat(e.target.value)}
+          />
 
 
         </>

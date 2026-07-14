@@ -117,8 +117,9 @@ const  ListProduct = () => {
           <h4>Total Price: ${totalPrice.toFixed(2)}</h4>
         </div>
       ) : (
-        <p>The cart is empty.</p>
-      )}
+        <p>The cart is empty.</p> 
+        
+      )} <br/> <br/>
     </div>
   );
 };
