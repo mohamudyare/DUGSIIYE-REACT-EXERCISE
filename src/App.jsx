@@ -4,7 +4,9 @@ import  DynamicCard from './Exercise3'
 import ListProduct from './Exercise5'
 
 
-import { useEffect , useState } from 'react'
+import React , { useEffect , useState } from 'react'
+
+
 
 
 function App(){
@@ -40,6 +42,27 @@ function App(){
     },[name , great ])
 
     // exerise 6 end
+
+
+
+
+    // Exercise 7
+    const [mouse , setMouse] = useState({x:0,y:0});
+
+    useEffect(()=>{
+        const handleMouseMove = (e)=>{
+            setMouse({x : e.clientX ,  y: e.clientY})
+        };
+
+        window.addEventListener("mousemove" , handleMouseMove );
+
+
+        return ()=>{
+            window.removeEventListener("mousemove" , handleMouseMove )
+        }
+    })
+
+
 
     return(
         <>
@@ -85,7 +108,21 @@ function App(){
                 type="text"
                 value={great}
                 onChange={(e)=> setGreat(e.target.value)}
-          />
+          /> <br/> <br/> <br/> <br/>
+
+
+
+
+
+
+          {/* Exercise 7 */}
+
+            <div>
+                <h1>Exercise 7</h1>
+                 <h4>Mouse X : {mouse.x}</h4>
+
+                <h4>Mouse Y : {mouse.y}</h4> 
+            </div>
 
 
         </>

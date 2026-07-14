@@ -11,3 +11,44 @@
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
+
+
+
+import React , { useEffect , useState } from 'react'
+
+function App(){
+
+
+
+  const [mouse , setMouse] = useState({x:0,y:0});
+
+    useEffect(()=>{
+        const handleMouseMove = ()=>{
+            setMouse({x : e.clientX ,  y: e.clientY})
+        };
+
+        window.addEventListener("mousemove" , handleMouseMove );
+
+
+        return ()=>{
+            window.removeEventListener("mousemove" , handleMouseMove )
+        }
+    })
+
+
+    return(
+      <div>
+             <div>
+                <h1>Exercise 7</h1>
+                 <h4>Mouse X : {mouse.x}</h4>
+
+                <h4>Mouse Y : {mouse.y}</h4> 
+            </div>
+
+      </div>
+    )
+
+    }
+
+
+    export default App;
