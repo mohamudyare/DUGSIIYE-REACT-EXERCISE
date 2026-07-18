@@ -64,6 +64,60 @@ function App(){
 
 
 
+
+    // Exercise 8
+
+    const [initialTime , setInitalTime] = useState(30)
+
+    const [time , setTime] = useState(30);
+
+    const [running , setRunning] = useState(false);
+
+
+
+    useEffect(()=>{
+
+       
+        let timerId;
+
+        if(running){
+            timerId = setInterval(()=>{
+                setTime((prev)=> prev + 1)
+            })
+        }
+
+        return ()=> clearInterval(timerId)
+
+    },[running , time])
+
+
+    const handleStart = ()=>{
+        setRunning(true);
+    }
+
+
+    
+    const handleStop = ()=>{
+        setRunning(false);
+    }
+
+
+    
+    const handleReset = ()=>{
+        setRunning(false);
+        setTime(initialTime);
+    }
+
+
+    const handleChange = (e)=>{
+        const value = Number(e.target.value)
+        setInitalTime(value);
+        setTime(value);
+        setRunning(false);
+    }
+
+    // Exerxise 8 end
+
     return(
         <>
            <Usecard/>
@@ -122,8 +176,31 @@ function App(){
                  <h4>Mouse X : {mouse.x}</h4>
 
                 <h4>Mouse Y : {mouse.y}</h4> 
-            </div>
+            </div> 
 
+
+
+
+            {/* Exercise 8 */}
+
+            <div>
+                    <h1>Exercise 8</h1>
+                    <h2>Countdown timer</h2>
+
+                    <label>Set-Time (seconds) :</label>
+
+                    <input
+                     type="text" 
+                     value={initialTime}
+                     onChange={handleChange}
+                     /> <br/>
+
+                  <p>Time Left : {time}second</p>
+
+                <button onClick={ handleStart} disabled={running || time === 0}>Start</button>
+                <button  onClick={ handleStop} disabled={!running}>Stop</button>
+                 <button  onClick={ handleReset}>Reset</button>
+         </div>
 
         </>
        
