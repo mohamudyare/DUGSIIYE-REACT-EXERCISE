@@ -3,6 +3,8 @@ import Blog  from './Exercise2'
 import  DynamicCard from './Exercise3'
 import ListProduct from './Exercise5'
 
+import UserList from './UserList.E-10'
+
 
 import React , { useEffect , useState } from 'react'
 
@@ -176,6 +178,17 @@ function App(){
 
 
 
+
+
+            // Lesson 10 start
+
+            const   users = [
+                {id:1 , name:"mohan" , email:"(Mohantech@gmail.com)"} ,
+                {id:2 , name:"jamac" , email:"(Jamac@gmail.com)"} ,
+            ]
+
+
+
     return(
         <>
            <Usecard/>
@@ -292,7 +305,19 @@ function App(){
           <p>Public Repos: {userData.public_repos}</p>
         </div>
       )}
-    </div>
+    </div> <br/> <br/> <br/>
+
+
+
+
+
+    {/* lesson 10 */}
+
+      <div>
+       
+        <UserList users={ users}/>
+           
+      </div>
 
         </>
        
