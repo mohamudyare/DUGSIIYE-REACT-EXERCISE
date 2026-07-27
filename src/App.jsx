@@ -9,6 +9,8 @@ import LoginForm from './LoginForm-E-11'
 
 import Counter from './Exercise12'
 
+import DoubleCounter from './Counter-Exercise13'
+
 
 import { useEffect , useState } from 'react'
 
@@ -341,6 +343,13 @@ function App(){
       {/* Exercise 12 */}
       <div>
         <Counter/>
+      </div>
+
+
+      {/*   Exercise 13 */}
+
+      <div>
+        <DoubleCounter/>
       </div>
 
         </>
