@@ -11,6 +11,8 @@ import Counter from './Exercise12'
 
 import DoubleCounter from './Counter-Exercise13'
 
+import FormRegistration from './Form-Exercise14'
+
 
 import { useEffect , useState } from 'react'
 
@@ -350,6 +352,13 @@ function App(){
 
       <div>
         <DoubleCounter/>
+      </div>
+
+
+
+      {/* Exercise 14 */}
+      <div>
+            <FormRegistration/>
       </div>
 
         </>
