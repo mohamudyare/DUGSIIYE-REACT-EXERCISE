@@ -14,7 +14,12 @@ import DoubleCounter from './Counter-Exercise13'
 import FormRegistration from './Form-Exercise14'
 
 
-import { useEffect , useState } from 'react'
+import { useEffect , useState } from 'react';
+
+
+import LangContext from './LangContext';
+
+import { LangExercise15 } from './LangExercise15'
 
 
 
@@ -197,6 +202,18 @@ function App(){
 
 
 
+
+            // Exercise 15
+
+            const [language , setLanguage] = useState('English');
+
+
+            const toggleLang = () => {
+
+                setLanguage((prev)=> (prev === 'English' ? 'Spanish' : 'English'));
+            }
+
+
     return(
         <>
            <Usecard/>
@@ -349,7 +366,6 @@ function App(){
 
 
       {/*   Exercise 13 */}
-
       <div>
         <DoubleCounter/>
       </div>
@@ -360,6 +376,25 @@ function App(){
       <div>
             <FormRegistration/>
       </div>
+
+
+
+
+
+      {/* Exercise 15 */}
+
+      
+
+      <LangContext.Provider value={language}>
+
+        <h1>Exercise 15</h1>
+         
+
+        <button onClick={toggleLang}> Switch to {language === "English" ? "Spanish" :  "English"}</button>
+
+         <LangExercise15/>
+
+      </LangContext.Provider>
 
         </>
 
