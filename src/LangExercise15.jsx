@@ -11,9 +11,9 @@ export const LangExercise15 = () => {
       English: 'Hello!' ,
       Spanish: '!Hola' ,
     }
+
   return (
     <div>
-   
       <h2>{Message[Language]}</h2>
     </div>
   )

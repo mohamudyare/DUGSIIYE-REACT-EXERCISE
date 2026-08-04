@@ -16,10 +16,15 @@ import FormRegistration from './Form-Exercise14'
 
 import { useEffect , useState } from 'react';
 
-
+// Exercise 15
 import LangContext from './LangContext';
+import { LangExercise15 } from './LangExercise15';
 
-import { LangExercise15 } from './LangExercise15'
+
+// Exercise 16
+import CartContext from './CartContext16';
+import ProductItem16 from './ProductItem16';
+import CartSummery from './CartSummery';
 
 
 
@@ -214,6 +219,25 @@ function App(){
             }
 
 
+
+            // Exercise 16
+            const [itemCart , setItemCart] = useState([]);
+
+            const addCart = (item) => {
+                setItemCart([...itemCart , item]);
+
+            };
+
+
+            const removeCart = (itemId) => {
+ 
+                setItemCart(itemCart.filter((item) => item.id !== itemId));
+            }
+
+
+            const value = {itemCart , addCart , removeCart};
+
+
     return(
         <>
            <Usecard/>
@@ -382,9 +406,6 @@ function App(){
 
 
       {/* Exercise 15 */}
-
-      
-
       <LangContext.Provider value={language}>
 
         <h1>Exercise 15</h1>
@@ -394,7 +415,18 @@ function App(){
 
          <LangExercise15/>
 
-      </LangContext.Provider>
+      </LangContext.Provider> <br /> <br />
+
+
+
+      {/* Exercise 16 */}
+      
+      <CartContext.Provider value={value}>
+        <h1>Exercise 16</h1>
+        <ProductItem16 itemId={1} itemName="Juize" price={19.99}/>
+        <ProductItem16 itemId={2} itemName="Fruit" price={20.25}/>
+        <CartSummery/>
+      </CartContext.Provider> <br />
 
         </>
 
