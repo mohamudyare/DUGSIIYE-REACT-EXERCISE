@@ -26,6 +26,9 @@ import CartContext from './CartContext16';
 import ProductItem16 from './ProductItem16';
 import CartSummery from './CartSummery';
 
+// Exercise 17
+import ContactForm17 from './ContactForm17';
+
 
 
 
@@ -427,6 +430,13 @@ function App(){
         <ProductItem16 itemId={2} itemName="Fruit" price={20.25}/>
         <CartSummery/>
       </CartContext.Provider> <br />
+
+
+      {/* Exercise 17 */}
+
+      <div>
+        <ContactForm17/>
+      </div>
 
         </>
 
