@@ -23,7 +23,7 @@ const handleSubmit = (event)=> {
             <h1>Exercise 17</h1>
 
             <form onSubmit={handleSubmit}>
-                
+
               <div>
                 <label>
                     Phone : 
@@ -85,7 +85,7 @@ const handleSubmit = (event)=> {
                     </label>
                  </div> <br />
                   
-                  <button type="submit">Submit</button>
+                  <button type="submit">Submit</button> <br /> <br />
            
 
             </form>
