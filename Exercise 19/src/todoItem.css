@@ -1,0 +1,23 @@
+
+
+.li-item{
+    background-color: rgb(184, 180, 175);
+  
+}
+
+
+
+.btn-delete{
+    background-color: brown;
+    color: white;
+    border: none;
+    font-size: 14px;
+    border-radius: 4px;
+    
+}
+
+
+
+.span-item{
+    font-size: 18px;
+}
