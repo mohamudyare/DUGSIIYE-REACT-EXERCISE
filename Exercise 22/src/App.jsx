@@ -20,9 +20,24 @@ const App = () => {
 
           console.log(inputValue);
 
+          if(!inputValue) {
+                alert("please write input value");
+                return
+          }
+
           console.log(isSelected);
+
+          if(isSelected === "") {
+              alert("please select Language");
+              return
+          }
         
           console.log(isChecked);
+          
+          if(!isChecked) {
+              alert("please check box");
+              return
+          }
      }
 
 
