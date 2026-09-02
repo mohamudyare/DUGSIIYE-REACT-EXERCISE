@@ -10,7 +10,7 @@ const Home = () => {
     <div className='text-center items-center pt-5 '>
       
       <div className="pb-6">
-      <h1 className='font-bold text-gray-800 text-2xl'>Welcome to Recipe Book</h1>
+      <h1 className='font-bold text-gray-800 text-3xl'>Welcome to Recipe Book</h1>
       <p className='text-gray-500 pt-4 '>Diccover delicious recipes and start cooking today!</p>
       </div>
 
